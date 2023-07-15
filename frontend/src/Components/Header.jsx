@@ -14,7 +14,7 @@ export const Header = (props) => {
     const check = async () => {
       const checkadmin = await props.isAdmin();
       setisAdmin(checkadmin);
-      console.log("is Admin" + isAdmin);
+      console.log("is Admin" + checkadmin);
     };
     check();
   }, []);

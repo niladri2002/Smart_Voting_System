@@ -2,8 +2,35 @@ import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
 
 function Register(props) {
+  const [isAdmin, setisAdmin] = useState(true);
+  useEffect(() => {
+    const check = async () => {
+      const checkadmin = await props.isAdmin();
+      setisAdmin(checkadmin);
+      console.log("is Admin" + checkadmin);
+    };
+    check();
+  }, []);
+  return (
+    <>
+      {isAdmin ? (
+        <RegisterComponent
+          isAdmin={props.isAdmin}
+          authorize={props.authorize}
+        />
+      ) : (
+        <div className="headings" style={{ textAlign: "center" }}>
+          You are not admin
+        </div>
+      )}
+    </>
+  );
+}
+
+function RegisterComponent(props) {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+
   const [capturedImage, setCapturedImage] = useState(null);
   const [VideoHide, setVideoHide] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -141,99 +168,93 @@ function Register(props) {
 
   return (
     <div>
-      <div>
-        <br />
-        <div className="RegisterForm">
-          <div className="photo">
-            {capturedImage && (
-              <img
-                src={capturedImage}
-                alt="Captured"
-                width="400"
-                height="300"
-              />
-            )}
-            {!VideoHide ? (
-              <video
-                ref={videoRef}
-                width="400"
-                height="300"
-                autoPlay
-                muted
-                style={{ borderRadius: "14px" }}
-              ></video>
-            ) : (
-              <></>
-            )}
-            <canvas
-              ref={canvasRef}
-              style={{ display: "none" }}
+      <br />
+      <div className="RegisterForm">
+        <div className="photo">
+          {capturedImage && (
+            <img src={capturedImage} alt="Captured" width="400" height="300" />
+          )}
+          {!VideoHide ? (
+            <video
+              ref={videoRef}
               width="400"
               height="300"
-            ></canvas>
-            <div>
-              {" "}
-              <button onClick={startCapture}>Start Webcam</button>
-              <button onClick={captureImage}>Capture Image</button>
-            </div>
+              autoPlay
+              muted
+              style={{ borderRadius: "14px" }}
+            ></video>
+          ) : (
+            <></>
+          )}
+          <canvas
+            ref={canvasRef}
+            style={{ display: "none" }}
+            width="400"
+            height="300"
+          ></canvas>
+          <div>
+            {" "}
+            <button onClick={startCapture}>Start Webcam</button>
+            <button onClick={captureImage}>Capture Image</button>
           </div>
+        </div>
 
-          <div className="inputs">
-            <h1>Register</h1>
+        <div className="inputs">
+          <h1>Register</h1>
 
-            <form onSubmit={handleSubmit} className="inputform">
-              <label>
-                Aadhar No:
-                <input
-                  type="text"
-                  name="aadhar"
-                  value={formValues.aadhar}
-                  onChange={handleFormInputChange}
-                />
-              </label>
-              <br />
-              <label>
-                Public Address:
-                <input
-                  type="text"
-                  name="publicAddress"
-                  value={formValues.publicAddress}
-                  onChange={handleFormInputChange}
-                  style={{ width: "60%" }}
-                />
-              </label>
-              <br />
-              <label>
-                First Name:
-                <input
-                  type="text"
-                  name="firstName"
-                  value={formValues.firstName}
-                  onChange={handleFormInputChange}
-                />
-              </label>
-              <br />
-              <label>
-                Last Name:
-                <input
-                  type="text"
-                  name="lastName"
-                  value={formValues.lastName}
-                  onChange={handleFormInputChange}
-                />
-              </label>
-              <br />
-              <label>
-                Phone No:
-                <input
-                  type="text"
-                  name="phone"
-                  value={formValues.phone}
-                  onChange={handleFormInputChange}
-                />
-              </label>
-              {/* <br /> */}
-              {/* <label>
+          <form onSubmit={handleSubmit} className="inputform">
+            <label>
+              Aadhar No:
+              <input
+                type="text"
+                name="aadhar"
+                value={formValues.aadhar}
+                onChange={handleFormInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Public Address:
+              <input
+                type="text"
+                name="publicAddress"
+                value={formValues.publicAddress}
+                onChange={handleFormInputChange}
+                style={{ width: "60%" }}
+              />
+            </label>
+            <br />
+            <label>
+              First Name:
+              <input
+                type="text"
+                name="firstName"
+                value={formValues.firstName}
+                onChange={handleFormInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Last Name:
+              <input
+                type="text"
+                name="lastName"
+                value={formValues.lastName}
+                onChange={handleFormInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Phone No:
+              <input
+                type="text"
+                name="phone"
+                value={formValues.phone}
+                onChange={handleFormInputChange}
+              />
+            </label>
+            {/* <br /> */}
+            {/* <label>
                 Age:
                 <input
                   type="text"
@@ -242,8 +263,8 @@ function Register(props) {
                   onChange={handleFormInputChange}
                 />
               </label> */}
-              {/* <br /> */}
-              {/* <label>
+            {/* <br /> */}
+            {/* <label>
                 Date of Birth:
                 <input
                   type="text"
@@ -252,23 +273,22 @@ function Register(props) {
                   onChange={handleFormInputChange}
                 />
               </label> */}
-              <br />
-              <label>
-                Email:
-                <input
-                  type="text"
-                  name="email"
-                  value={formValues.email}
-                  onChange={handleFormInputChange}
-                />
-              </label>
-              <br />
+            <br />
+            <label>
+              Email:
+              <input
+                type="text"
+                name="email"
+                value={formValues.email}
+                onChange={handleFormInputChange}
+              />
+            </label>
+            <br />
 
-              <button className="submitBtn" type="submit">
-                Submit
-              </button>
-            </form>
-          </div>
+            <button className="submitBtn" type="submit">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>

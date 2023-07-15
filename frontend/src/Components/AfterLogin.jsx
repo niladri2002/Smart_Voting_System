@@ -38,7 +38,9 @@ export const AfterLogin = (props) => {
             <Route index element={<Default />} />
             <Route
               path="/Auth"
-              element={<Register authorize={props.authorize} />}
+              element={
+                <Register isAdmin={props.isAdmin} authorize={props.authorize} />
+              }
             />
 
             <Route

@@ -40,9 +40,9 @@ export const Vote = (props) => {
                 </tbody>
               </table>
             ) : props.voted ? (
-              <p>You have already voted</p>
+              <div className="headings">You have already voted</div>
             ) : (
-              <p>You are not authorized to Vote</p>
+              <div className="headings"> You are not authorized to Vote</div>
             )}
           </div>
         )}
