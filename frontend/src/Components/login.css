@@ -1,0 +1,172 @@
+/* .loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    height: 100vh;
+  } */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Poppins:wght@700&display=swap');
+.heading{
+    align-items: center;
+   
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+   
+    color:white;
+    font-family: 'poppins',sans-serif;
+    /* background:linear-gradient(rgba(238, 130, 238, 0.9), rgba(186, 85, 211, 0.9)), url("/src/assets/back.jpg"); */
+    
+}
+.heading h1{
+    font-size:3vw;
+    margin-top: 2vh;
+}
+
+@keyframes textAnimation {
+    0% { transform: translateX(-100%); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+
+  @keyframes textAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Apply the animation to each letter */
+  .animated-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: textAnimation 3s linear forwards;
+  }
+
+  /* Add spacing between words */
+  .animated-text span.space {
+    visibility: hidden;
+    width: 1ch;
+  }
+
+
+  .background{
+    background-image: linear-gradient(164deg, rgb(116 112 102 / 70%), rgb(0 0 0 / 91%)), url(/src/assets/govt.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.firstSection{
+    height: 100vh;
+}
+
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 85%;
+    margin: auto;
+    margin-top: 3%;
+    
+}
+
+.firstHalf{
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.firstHalf img{
+    margin-top: 4%;
+    width: 8%;
+    height: 8%;
+
+    /* border: 2px solid white;
+    border-radius: 50px; */
+    
+}
+.below-firsthalf{
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.secondHalf{
+    width: 40%;
+    margin-left: 10%;
+}
+
+
+.secondHalf img{
+    width: 100%;
+  /*  padding: 4px 0;*/
+
+display: block;
+margin: auto;
+} 
+
+.text-big{
+    font-size: 3vw;
+    font-weight: 700;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    }
+    
+    .text-small{
+        font-family:'Nunito Sans', sans-serif;
+     font-size: 1.4vw;   
+     color: rgb(255, 253, 253);
+     font-weight: 400;
+     margin-top: 5%;
+    }
+
+    
+
+    .btn{
+    padding: 8px 20px;
+    margin: 8px 3px;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 18px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    }
+
+    .buttons{
+        margin-top: 3.5%;
+    }
+    button:hover {
+        background-color: rgb(116 116 116 / 90%);
+      }
+    .btn-sm{
+        padding: 6px 10px;
+        vertical-align: middle;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+    }
+    
+    .NotAuthorized{
+        font-size: 16pt;
+        color:red;
+        font-family: 'Nunito Sans',sans-serif;
+        background-color: yellow;
+        width: fit-content;
+        border-radius: 3px ;
+    }
+    .btn-dark{
+        color: #fffbf4;
+        font-family: 'Ubuntu', sans-serif;
+        background-color: rgb(91 91 91 / 78%);
+    
+     
+    }

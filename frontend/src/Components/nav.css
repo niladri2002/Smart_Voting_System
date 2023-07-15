@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.active{
+    color: #5f99be;
+}
+
+
+.backgroun{
+  
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.background{
+    /* background: rgba(0, 0, 0, 0.7)url("../assets/back.jpg"); */
+  
+            width: 100%;
+    background-blend-mode: darken;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    /* background-color:  rgb(20 20 20 / 75%); */
+    background-image: linear-gradient(164deg, rgb(211 148 32), rgb(255 255 255)), url(/src/assets/goldenCopy.jpg);
+    height: 80px; /* Adjust the height as per your preference */
+}
+
+.navlist {
+    width:70%;
+    display: flex;
+    align-items: center;
+    color:white;
+   
+}
+
+.navlist h1 {
+    justify-content: left;
+    text-align: left;
+    padding: 0 16px;
+  
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8em; /* Adjust the font size as per your preference */
+    font-weight: bold;
+}
+
+.logo {
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    margin: 15px 37px;
+    align-items: center;
+}
+
+.navlist li {
+    list-style: none;
+    padding: 26px 30px;
+    font-size: 22px; /* Adjust the font size as per your preference */
+    font-weight: bold;
+   
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.logo img {
+    width: 28%;
+    max-width: 50px;
+    border: 3px solid black;
+    border-radius: 50px;
+}
+
+
+.navlist li a{
+    text-decoration: none;
+   color: white;
+}
+
+
+.navlist li a:hover {
+    text-decoration: underline;
+    color: white;
+     }
+
+.rightNav{
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+       
+      /*  background-color: aqua;*/
+    /*    text-align: right;
+        padding:0 23px;*/
+    }
+
+    .rightNav li{
+        list-style: none;
+    padding: 26px 30px;
+    font-size: 22px; /* Adjust the font size as per your preference */
+   color:rgb(255, 255, 255);
+   
+    font-family: 'Ubuntu', sans-serif;
+        }
+    
+    #search{
+        padding: 5px;
+        font-size: 17px;
+        border: 2px solid gray;
+       border-radius: 9px;
+    } 
+
+
+    .btn{
+        padding: 8px 20px;
+        margin: 8px 3px;
+        border: 1px solid white;
+        border-radius: 8px;
+        font-size: 18px;
+        background: none;
+        color: white;
+        cursor: pointer;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 20px;
+        }
+        
+        .btn-sm{
+            padding: 6px 10px;
+            vertical-align: middle;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 16px;
+        }
