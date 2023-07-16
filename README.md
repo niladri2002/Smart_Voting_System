@@ -14,6 +14,7 @@ Get involved and let your voice be heard with eVote!
 
 1. Add MetaMask extension to chrome , create wallet if You haven’t (you can watch this video https://youtu.be/Af_lQ1zUnoM).
 2. Add this Network to your wallet :-
+   
    Network Name: Mumbai
    
    New RPC URL: https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78
