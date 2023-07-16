@@ -6,6 +6,11 @@ import "./login.css";
 
 export const Login = (props) => {
   console.log("ShowNAM " + props.ShowNotAuthorized);
+  const handleButtonClick = () => {
+    window.open(
+      "https://drive.google.com/file/d/1WO0uSGg5z5axv99zabekI_ZhjXEJZSKE/view?usp=drive_link"
+    );
+  };
   return (
     <>
       <Navbar />
@@ -65,7 +70,9 @@ export const Login = (props) => {
                 <button className="btn btn-dark" onClick={props.connectAccount}>
                   Login Metamask
                 </button>
-                <button className="btn btn-dark">watch Video</button>
+                <button className="btn btn-dark" onClick={handleButtonClick}>
+                  watch Video
+                </button>
               </div>
             </div>
             <div className="NotAuthorized">
