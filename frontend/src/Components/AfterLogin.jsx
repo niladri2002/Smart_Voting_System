@@ -20,7 +20,9 @@ import { Header } from "./Header";
 export const AfterLogin = (props) => {
   return (
     <div className="loginContainer">
-      <BrowserRouter basename="/">
+      <BrowserRouter
+        basename={import.meta.env.DEV ? "/" : "/Smart-Voting-system/"}
+      >
         <Routes>
           <Route
             path="/"

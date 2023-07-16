@@ -1,5 +1,6 @@
 const contract_address="0xB969Fa988B15C9A2B629c62aC149bdb3328FEB76"
 const adminAddress=    "0x3C6E370AB799bCCD51319368Ff6d78537028202d"
+const BaseUrl="http://127.0.0.1:5000"
 const contract_abi= [
   {
     "inputs": [
@@ -243,4 +244,4 @@ const contract_abi= [
     "type": "function"
   }
 ];
-  export { contract_address, contract_abi,adminAddress}
+  export { contract_address, contract_abi,adminAddress,BaseUrl}

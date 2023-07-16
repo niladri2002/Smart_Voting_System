@@ -3,8 +3,12 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import { contract_address, contract_abi } from "../Consts/constants.js";
-
+import {
+  contract_address,
+  contract_abi,
+  BaseUrl,
+} from "../Consts/constants.js";
+axios.defaults.baseURL = BaseUrl;
 export const Header = (props) => {
   const [isAdmin, setisAdmin] = useState(false);
 
@@ -22,7 +26,7 @@ export const Header = (props) => {
     const updatedDuration = duration;
     if (!isNaN(updatedDuration) && updatedDuration >= 0) {
       axios
-        .post("http://Sushanta-Das:5000/set-duration", {
+        .post("/set-duration", {
           duration: updatedDuration,
         })
         .then((response) => {
@@ -92,7 +96,7 @@ const TimerComponent = (props) => {
   const [remainingTime, setRemainingTime] = useState(0);
   useEffect(() => {
     axios
-      .get("http://Sushanta-Das:5000/get-remaining-time")
+      .get("/get-remaining-time")
       .then((response) => {
         const { remainingTime } = response.data;
 
@@ -105,7 +109,7 @@ const TimerComponent = (props) => {
   }, []);
   useEffect(() => {
     axios
-      .get("http://Sushanta-Das:5000/get-remaining-time")
+      .get("/get-remaining-time")
       .then((response) => {
         const { remainingTime } = response.data;
         setRemainingTime(remainingTime);

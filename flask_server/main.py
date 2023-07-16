@@ -6,12 +6,11 @@ from flask_cors import CORS
 import numpy as np
 
 
-from flask_socketio import SocketIO, emit
 import time
 import cv2
 import socket
 import os
-import threading
+
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
@@ -211,8 +210,8 @@ if __name__ == '__main__':
     port = 5000  # Default Flask port
 
   # Start the server
-    print(f"Flask server running on http://{hostname}:{port}/")
-    app.run(host=hostname, port=port)
+
+    app.run(port=port)
 # Print the server details
 
 # Default Flask port

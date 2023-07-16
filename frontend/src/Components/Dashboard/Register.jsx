@@ -1,5 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import axios from "axios";
+import {
+  contract_address,
+  contract_abi,
+  BaseUrl,
+} from "../../Consts/constants.js";
+axios.defaults.baseURL = BaseUrl;
 
 function Register(props) {
   const [isAdmin, setisAdmin] = useState(true);
@@ -136,7 +142,7 @@ function RegisterComponent(props) {
 
     // Make API call
     axios
-      .post("http://Sushanta-Das:5000/register", data)
+      .post("/register", data)
       .then((response) => {
         console.log(response.data);
       })

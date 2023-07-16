@@ -1,6 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
-
+import {
+  contract_address,
+  contract_abi,
+  BaseUrl,
+} from "../../Consts/constants.js";
+axios.defaults.baseURL = BaseUrl;
 function Verifyface(props) {
   const videoRef = useRef(null);
   const [detectionResult, setDetectionResult] = useState(null);
@@ -30,7 +35,7 @@ function Verifyface(props) {
 
     // Make API call to the 'vote' endpoint
     axios
-      .post("http://Sushanta-Das:5000/vote", data)
+      .post("/vote", data)
       .then((response) => {
         console.log("Detection Result", response.data);
         setDetectionResult(response.data);
