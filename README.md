@@ -26,10 +26,11 @@ Get involved and let your voice be heard with eVote!
    Block Explorer URL: https://mumbai.polygonscan.com .
 
    Import Admin Account which will be required to register new voter :
-   Click on account on metamask and then on import account , and then enter this private address: `c136853735ab4d302e76b89ba2d0f4f9a3379183acbe1d52af3aa9f840056fba` to add admin           acoount. create some other accounts to authorize them as voter.
+   
+   Click on account on metamask and then on import account , and then enter this private address: `c136853735ab4d302e76b89ba2d0f4f9a3379183acbe1d52af3aa9f840056fba` to add admin         acoount. create some other accounts to authorize them as voter.
    see this to setup mumbai polygon network: https://wiki.polygon.technology/docs/tools/wallets/metamask/config-polygon-on-metamask/
 
-4. Clone the repo : git clone https://github.com/niladri2002/Smart_Voting_System.git
+4. Clone the repo : ```git clone https://github.com/niladri2002/Smart_Voting_System.git```
 5. If you want to view frontend hosted in github visit this link after setting up flask_server(step 5)   https://sushanta-das.github.io/Smart-Voting-system/ 
    and  If you want to run frontend locally go to frontend folder inside Smart_Voting_System in terminal and run this command :  `npm i –-force` and run `npm run dev` after setting      backend 
 
@@ -68,7 +69,7 @@ Get involved and let your voice be heard with eVote!
 
      6.  The Flask server will start running on http://localhost:5000/.
 
-7.  Smart contract is deployed in mumbai polygon matic Blockchain network. So there is no need to deploy again . if you want to deploy it again, you can deploy and make sure to update contract address in constants.js in consts folder under src folder.
+7.  Smart contract is deployed in mumbai polygon matic Blockchain network. So there is no need to deploy again . if you want to deploy it again, you can deploy and make sure to update contract address in constants.js in consts folder under src folder in frontend.
 8.  If you want to run frontend from hosted github page click this link https://sushanta-das.github.io/Smart-Voting-system/
             otherwise if you want run frontend locally run frontend by npm run dev in frontend folder.
 
