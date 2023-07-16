@@ -15,20 +15,24 @@ Get involved and let your voice be heard with eVote!
 1. Add MetaMask extension to chrome , create wallet if You haven’t (you can watch this video https://youtu.be/Af_lQ1zUnoM).
 2. Add this Network to your wallet :-
    Network Name: Mumbai
+   
    New RPC URL: https://polygon-mumbai.infura.io/v3/4458cf4d1689497b9a38b1d6bbf05e78
+   
    Chain ID: 80001
+   
    Currency Symbol: MATIC
+   
    Block Explorer URL: https://mumbai.polygonscan.com .
 
    Import Admin Account which will be required to register new voter :
    Click on account on metamask and then on import account , and then enter this private address: `c136853735ab4d302e76b89ba2d0f4f9a3379183acbe1d52af3aa9f840056fba` to add admin           acoount. create some other accounts to authorize them as voter.
    see this to setup mumbai polygon network: https://wiki.polygon.technology/docs/tools/wallets/metamask/config-polygon-on-metamask/
 
-3. Clone the repo : git clone https://github.com/niladri2002/Smart_Voting_System.git
-4. If you want to view frontend hosted in github visit this link after setting up flask_server(step 5)   https://sushanta-das.github.io/Smart-Voting-system/ 
+4. Clone the repo : git clone https://github.com/niladri2002/Smart_Voting_System.git
+5. If you want to view frontend hosted in github visit this link after setting up flask_server(step 5)   https://sushanta-das.github.io/Smart-Voting-system/ 
    and  If you want to run frontend locally go to frontend folder inside Smart_Voting_System in terminal and run this command :  `npm i –-force` and run `npm run dev` after setting      backend 
 
-5.  Backend (flask_Server setup is must for both viewing hosted frontend and running frontend locally )
+6.  Backend (flask_Server setup is must for both viewing hosted frontend and running frontend locally )
 
   
 
@@ -63,8 +67,8 @@ Get involved and let your voice be heard with eVote!
 
      6.  The Flask server will start running on http://localhost:5000/.
 
-6.  Smart contract is deployed in mumbai polygon matic Blockchain network. So there is no need to deploy again . if you want to deploy it again, you can deploy and make sure to update contract address in constants.js in consts folder under src folder.
-7.  If you want to run frontend from hosted github page click this link https://sushanta-das.github.io/Smart-Voting-system/
+7.  Smart contract is deployed in mumbai polygon matic Blockchain network. So there is no need to deploy again . if you want to deploy it again, you can deploy and make sure to update contract address in constants.js in consts folder under src folder.
+8.  If you want to run frontend from hosted github page click this link https://sushanta-das.github.io/Smart-Voting-system/
             otherwise if you want run frontend locally run frontend by npm run dev in frontend folder.
 
 Tutorial on how to use the application is provided in the given link "https://drive.google.com/file/d/1WO0uSGg5z5axv99zabekI_ZhjXEJZSKE/view?usp=drive_link"
